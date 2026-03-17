@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForestFiends | Cory Smith</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>ForestFiends</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#gameplay">Gameplay</a>
+            <a href="#overview">Overview</a>
+            <a href="#code-review">Code Review</a>
+            <a href="#showcase">Feature Showcase</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h2>A Dark Fantasy Survival Adventure</h2>
+            <p>
+                ForestFiends is a stylized action-survival game set in a haunted woodland full of cursed creatures,
+                hidden dangers, and magical combat. The player must survive enemy waves, explore the environment,
+                and battle fiends that grow stronger over time.
+            </p>
+        </section>
+
+        <section id="gameplay" class="feature-game">
+            <h2>Gameplay Showcase</h2>
+            <div class="video-container">
+                <video controls autoplay muted loop poster="../images/forestfiends-thumb.jpg">
+                    <source src="../videos/forestfiends-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="feature-info">
+                <h3>Survive the Forest</h3>
+                <p>
+                    Fight through corrupted woodland enemies, dodge hazards, and use timing, movement,
+                    and attacks to stay alive. ForestFiends mixes atmosphere, action, and progression
+                    into a compact gameplay experience.
+                </p>
+                <a class="btn" href="https://github.com/xOnlineSavage93/SmithPortfolio" target="_blank">View Project Repository</a>
+            </div>
+        </section>
+
+        <section id="overview">
+            <h2>Game Overview</h2>
+            <div class="project-card">
+                <h3>Concept</h3>
+                <p>
+                    A fast-paced RPG set in a vibrant, cartoony forest/tundra/dessert where your main goal is to be the last one standing. Players must constantly move and adapt, as they're relentlessly chased by enemy creatures. 
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Core Features</h3>
+                <ul>
+                    <li>Wave-based enemy encounters</li>
+                    <li>Stylized fantasy forest setting</li>
+                    <li>Player combat and survival mechanics</li>
+                    <li>Enemy AI with pursuit and attack behavior</li>
+                    <li>Game systems built through reusable scripts and modular logic</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>Development Focus</h3>
+                <p>
+                    This project highlights gameplay programming, combat systems, enemy logic, and overall
+                    game feel. It also serves as a portfolio piece showing how design and code work together.
+                </p>
+            </div>
+        </section>
+
+        <section id="code-review">
+            <h2>Code Review</h2>
+            <p>
+                Below is an example gameplay system used for enemy pursuit. This kind of logic helps give
+                the enemies presence and pressure during combat encounters.
+            </p>
+
+            <div class="code-block">
+<pre><code>using UnityEngine;
+
+public class FiendChase : MonoBehaviour
+{
+    public Transform player;
+    public float speed = 3f;
+    public float stoppingDistance = 1.5f;
+
+    void Update()
+    {
+        if (player == null) return;
+
+        float distance = Vector2.Distance(transform.position, player.position);
+
+        if (distance > stoppingDistance)
+        {
+            transform.position = Vector2.MoveTowards(
+                transform.position,
+                player.position,
+                speed * Time.deltaTime
+            );
+        }
+    }
+}</code></pre>
+            </div>
+
+            <p style="margin-top: 20px;">
+                This script demonstrates a simple but effective enemy chase system. It continuously checks the
+                distance to the player and moves the enemy forward until it reaches attack range.
+            </p>
+        </section>
+
+        <section id="showcase">
+            <h2>Feature Showcase</h2>
+            <p>
+                This section can display a second clip focused on one mechanic, such as enemy movement,
+                a combat attack, projectile logic, or spawning behavior.
+            </p>
+
+            <div class="video-container">
+                <video controls poster="../images/forestfiends-code-thumb.jpg">
+                    <source src="../videos/forestfiends-code-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section>
+            <h2>Tools Used</h2>
+            <div class="project-card">
+                <ul>
+                    <li>Unity</li>
+                    <li>C# scripting</li>
+                    <li>Gameplay systems and enemy AI</li>
+                    <li>UI layout and game presentation</li>
+                    <li>Portfolio-ready project documentation</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><a href="index.html">← Back to Portfolio</a></p>
+    </footer>
+
+</body>
+</html>

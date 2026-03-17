@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizard Commanders VR RTS | Cory Smith</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Wizard Commanders VR RTS</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#gameplay">Gameplay</a>
+            <a href="#code-review">Code Review</a>
+            <a href="#code-showcase">Code Showcase</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="gameplay" class="feature-game">
+            <h2>Gameplay Showcase</h2>
+            <div class="video-container">
+                <video controls autoplay muted loop>
+                    <source src="../videos/wizard-preview.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="feature-info">
+                <p>
+                    Wizard Commanders is a stylized fantasy strategy project focused on commanding magical factions,
+                    battlefield positioning, and immersive visual presentation.
+                </p>
+            </div>
+        </section>
+
+        <section id="code-review">
+            <h2>Code Review</h2>
+            <p>
+                This section highlights part of the programming behind the game. You can use it to explain
+                mechanics like unit spawning, player input, AI behavior, combat systems, or UI controls.
+            </p>
+
+            <div class="code-block">
+<pre><code>
+public class UnitSpawner : MonoBehaviour
+{
+    public GameObject wizardPrefab;
+    public Transform spawnPoint;
+
+    void Start()
+    {
+        SpawnWizard();
+    }
+
+    void SpawnWizard()
+    {
+        Instantiate(wizardPrefab, spawnPoint.position, spawnPoint.rotation);
+    }
+}
+</code></pre>
+            </div>
+        </section>
+
+        <section id="code-showcase">
+            <h2>Code In Action</h2>
+            <p>
+                This clip section can show the feature working in-game, such as spawning units,
+                combat logic, or UI interaction tied to the code above.
+            </p>
+            <div class="video-container">
+                <video controls>
+                    <source src="../videos/wizard-code-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="index.html">← Back to Portfolio</a></p>
+    </footer>
+
+</body>
+</html>
