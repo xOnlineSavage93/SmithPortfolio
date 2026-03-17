@@ -181,3 +181,19 @@ a:hover {
         width: 95%;
     }
 }
+
+.video-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    border: 2px solid #33f6ff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 15px #33f6ff, 0 0 25px rgba(124, 58, 237, 0.5);
+    background: #050816;
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
